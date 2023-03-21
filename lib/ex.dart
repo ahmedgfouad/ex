@@ -1,8 +1,6 @@
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-// import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-
 
 class Ex extends StatefulWidget {
   const Ex({Key? key}) : super(key: key);
@@ -14,8 +12,6 @@ class Ex extends StatefulWidget {
 class _ExState extends State<Ex> {
 
   final videoURL="https://www.youtube.com/watch?v=O7F-0_tQtMg";
-   // YoutubePlayerController? _controller;
-   
   VideoPlayerController? _videoPlayerController;
   ChewieController? _chewieController;
 
@@ -25,14 +21,6 @@ class _ExState extends State<Ex> {
   @override
   void initState() {
     super.initState();
-    
-    // final videID= YoutubePlayer.convertUrlToId(videoURL);
-    // _controller = YoutubePlayerController(
-    //     initialVideoId: videID!,
-    //   flags: const YoutubePlayerFlags(
-    //     autoPlay: false,
-    //   ),
-    // );
     
     _videoPlayerController = VideoPlayerController.network(
       "https://drive.google.com/uc?export=view&id=1NUFYDXAVAsN5pPGrwjV7enWfDSxWBbrZ",
@@ -92,21 +80,7 @@ class _ExState extends State<Ex> {
               Image.network("https://drive.google.com/uc?export=view&id=1as8_dcEB6narJnjKIKIBA2etO0xIDECL"),
               Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5q0FP74VV9wbfwP378_7kj7iDomHuKrxkXsxDdUT28V9dlVMNUe-EMzaLwaFhneeuZI&usqp=CAU"),
 
-              // YoutubePlayer(
-              //   controller: _controller!,
-              //  showVideoProgressIndicator: true,
-              //   // onReady: ()=> debugPrint("Ready"),
-              //   // bottomActions: [
-              //   //   CurrentPosition(),
-              //   //   ProgressBar(
-              //   //     isExpanded: true,
-              //   //     colors: ProgressBarColors(
-              //   //       playedColor: Colors.amber,
-              //   //       handleColor: Colors.red,
-              //   //     ),
-              //   //   )
-              //   // ],
-              // ),
+
             ],
           ),
         ));
